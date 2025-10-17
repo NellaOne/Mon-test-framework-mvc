@@ -1,0 +1,3 @@
+# Dans le projet Test_Project
+cd Mon-test-framework-mvc/Test_Project
+mvn compile exec:java -Dexec.mainClass="mg.etu3273.test.TestAnnotationMain"
