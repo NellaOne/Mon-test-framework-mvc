@@ -23,7 +23,7 @@ public class TestAnnotationMain {
             if (method.isAnnotationPresent(Url.class)) {
                 Url urlAnnotation = method.getAnnotation(Url.class);
                 String url = urlAnnotation.value();
-                
+                 
                 System.out.println("✅ ANNOTATION @Url TROUVÉE !");
                 System.out.println("URL mappée: " + url);
                 System.out.println("Méthode: " + method.getName());
