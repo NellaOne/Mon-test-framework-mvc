@@ -8,25 +8,13 @@
     <display-name>Test Framework MVC</display-name>
     <description>Application de test pour le framework MVC custom</description>
 
-    <!-- Configuration du Filter -->
-    <filter>
-        <filter-name>StaticResourceFilter</filter-name>
-        <filter-class>mg.etu3273.framework.StaticResourceFilter</filter-class>
-    </filter>
-    
-    <filter-mapping>
-        <filter-name>StaticResourceFilter</filter-name>
-        <url-pattern>/*</url-pattern>
-    </filter-mapping>
-
-    <!-- Configuration du FrontServlet -->
     <servlet>
         <servlet-name>FrontServlet</servlet-name>
         <servlet-class>mg.etu3273.framework.FrontServlet</servlet-class>
     </servlet>
-    
+
     <servlet-mapping>
         <servlet-name>FrontServlet</servlet-name>
-        <url-pattern>/front-controller</url-pattern>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
 </web-app>
