@@ -3,25 +3,31 @@ package mg.etu3273.test;
 import mg.etu3273.framework.annotation.Controller;
 import mg.etu3273.framework.annotation.Url;
 
-/**
- * Test2 - AVEC annotation @Controller
- * Cette classe DOIT être détectée
- */
 @Controller
-public class Test2 {  // ✅ PUBLIC !
+public class Test2 {  
     
     @Url("/test2/list")
     public String list() {
-        return "Liste des éléments - Test2";
+        System.out.println("✅ Méthode list() appelée dans Test2");
+        return "Liste des éléments - Test2 (invoqué via Reflection)";
     }
     
     @Url("/test2/add")
     public String add() {
-        return "Ajout d'un élément - Test2";
+        System.out.println("✅ Méthode add() appelée dans Test2");
+        return "Ajout d'un élément - Test2 (Sprint 4 OK !)";
     }
+
+    @Url("/test2/message")
+    public String message() {
+        System.out.println("✅ Méthode message() appelée dans Test2");
+        return "Bonjour depuis le contrôleur Test2 ! Framework MVC Sprint 4 fonctionne parfaitement.";
+    }
+        
     
     // Méthode sans @Url (ne doit pas être mappée)
     public String nonMappee() {
+        System.out.println("⚠️ Cette méthode ne devrait pas être appelée");
         return "Méthode non mappée de Test2";
     }
 }
