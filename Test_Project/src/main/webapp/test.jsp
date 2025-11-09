@@ -88,6 +88,9 @@
             <p><strong>Les liens bleus</strong> doivent passer par le FrontServlet et afficher les informations de debug.</p>
             <p><strong>Les liens verts</strong> sont des ressources statiques et doivent être servies directement par Tomcat.</p>
         </div>
+
+       
+</ul>
     </div>
 </body>
 </html>
