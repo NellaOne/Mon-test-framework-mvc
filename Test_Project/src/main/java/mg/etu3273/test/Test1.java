@@ -2,7 +2,6 @@ package mg.etu3273.test;
 
 import mg.etu3273.framework.annotation.Url;
 
-
 public class Test1 {  
     
     @Url("/test1/action")
