@@ -2,8 +2,8 @@ package mg.etu3273.test;
 
 import java.util.Map;
 
-import mg.etu3273.framework.Mapping;
-import mg.etu3273.framework.PackageScanner;
+import mg.etu3273.framework.scanner.Mapping;
+import mg.etu3273.framework.scanner.PackageScanner;
 
 public class TestScanMain {
     
