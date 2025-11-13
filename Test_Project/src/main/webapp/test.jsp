@@ -3,94 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Framework MVC - Page Statique</title>
+    <title>Test JSP - Sprint 4-bis</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
         .container {
             background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            max-width: 800px;
+            margin: 0 auto;
         }
         h1 {
             color: #2c3e50;
-            text-align: center;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
         }
-        .test-links {
-            margin: 30px 0;
-        }
-        .test-links a {
-            display: inline-block;
-            margin: 10px 15px;
-            padding: 12px 20px;
-            background: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .test-links a:hover {
-            background: #2980b9;
-        }
-        .static-resource {
-            background: #27ae60;
-        }
-        .static-resource:hover {
-            background: #229954;
+        .success {
+            background: #d4edda;
+            color: #155724;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #28a745;
+            margin: 20px 0;
         }
         .info {
-            background: #ecf0f1;
+            background: #d1ecf1;
+            color: #0c5460;
             padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        .badge {
+            display: inline-block;
+            padding: 8px 15px;
+            background: #667eea;
+            color: white;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🧪 Test Framework MVC - Ressources Statiques</h1>
+        <h1>✅ Sprint 4-bis - ModelView Fonctionne !</h1>
+        
+        <div class="success">
+            <h2 style="margin-top: 0;">🎉 Succès !</h2>
+            <p>Cette page JSP a été affichée via <strong>ModelView</strong> et <strong>RequestDispatcher</strong>.</p>
+        </div>
         
         <div class="info">
-            <h3>✅ Page Statique Fonctionnelle</h3>
-            <p><strong>Si vous voyez cette page, cela signifie que :</strong></p>
+            <h3>📋 Informations</h3>
+            <p><strong>Fichier:</strong> test.jsp</p>
+            <p><strong>Méthode contrôleur:</strong> Test2.view()</p>
+            <p><strong>Type de retour:</strong> <span class="badge">ModelView</span></p>
+        </div>
+        
+        <div class="info">
+            <h3>✅ Vérifications Sprint 4-bis</h3>
             <ul>
-                <li>Les ressources statiques (HTML) ne passent PAS par le FrontServlet</li>
-                <li>Tomcat sert correctement les fichiers statiques</li>
-                <li>Votre configuration web.xml est correcte</li>
+                <li>✅ Classe ModelView créée dans le Framework</li>
+                <li>✅ Méthode retourne ModelView avec setView("test.jsp")</li>
+                <li>✅ FrontServlet détecte le type ModelView</li>
+                <li>✅ FrontServlet appelle getView()</li>
+                <li>✅ RequestDispatcher.forward() vers la JSP</li>
+                <li>✅ Cette page s'affiche correctement</li>
             </ul>
         </div>
-
-        <h3>🔗 Liens de Test</h3>
-        <div class="test-links">
-            <a href="url/list" target="_blank">Test: /url/list</a>
-            <a href="test" target="_blank">Test: /test</a>
-            <a href="nimportequoi" target="_blank">Test: /nimportequoi</a>
-            <a href="api/users" target="_blank">Test: /api/users</a>
-            <a href="admin/dashboard" target="_blank">Test: /admin/dashboard</a>
+        
+        <div style="margin-top: 30px; padding: 15px; background: #fff3cd; border-radius: 8px;">
+            <p style="margin: 0; color: #856404;">
+                <strong>🎯 Sprint 4-bis Réussi !</strong> Le framework gère maintenant les vues JSP via ModelView.
+            </p>
         </div>
-
-        <h3>📁 Ressources Statiques</h3>
-        <div class="test-links">
-            <a href="style.css" class="static-resource" target="_blank">Test: style.css</a>
-            <a href="test.jsp" class="static-resource" target="_blank">Test: test.jsp</a>
-        </div>
-
-        <div class="info">
-            <h3>📋 Instructions de Test</h3>
-            <p><strong>Les liens bleus</strong> doivent passer par le FrontServlet et afficher les informations de debug.</p>
-            <p><strong>Les liens verts</strong> sont des ressources statiques et doivent être servies directement par Tomcat.</p>
-        </div>
-
-       
-</ul>
     </div>
 </body>
 </html>

@@ -1,5 +1,6 @@
 package mg.etu3273.test;
 
+import mg.etu3273.framework.ModelView;
 import mg.etu3273.framework.annotation.Controller;
 import mg.etu3273.framework.annotation.Url;
 
@@ -18,15 +19,26 @@ public class Test3 {
         return "Mise à jour d'un élément - Test3 (Invocation réussie !)";
     }
     
-    @Url("/test3/detail")
-    public String detail() {
-        System.out.println("✅ Méthode detail() appelée dans Test3");
-        return "Détail d'un élément - Test3 - Sprint 4 Complété !";
-    }
-    
     @Url("/test3/welcome")
     public String welcome() {
         System.out.println("✅ Méthode welcome() appelée dans Test3");
         return "Bienvenue ! Votre framework MVC fonctionne avec Reflection.";
+    }
+
+      @Url("/test3/page")
+    public ModelView page() {
+        System.out.println("✅ Test3.page() - Retourne ModelView");
+        ModelView mv = new ModelView();
+        mv.setView("page_test3.jsp");
+        System.out.println("   → Vue définie: page_test3.jsp");
+        return mv;
+    }
+
+    @Url("/test3/detail")
+    public ModelView detail() {
+        System.out.println("✅ Test3.detail() - Retourne ModelView");
+        ModelView mv = new ModelView("detail.jsp");
+        System.out.println("   → Vue définie: detail.jsp");
+        return mv;
     }
 }
