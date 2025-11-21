@@ -42,4 +42,30 @@ public class DeptController {
         mv.addObject("budget", 50000000.0);
         return mv;
     }
+
+    @Url("/dept/{id}")
+    public ModelView getDetail(Integer id) {
+        System.out.println("✅ DeptController.getDetail() appelé");
+        System.out.println("   Paramètre id: " + id + " (null pour Sprint 3-bis)");
+        
+        ModelView mv = new ModelView("dept_detail_dynamique.jsp");
+        mv.addObject("message", "Département - URL dynamique");
+        mv.addObject("urlPattern", "/dept/{id}");
+        mv.addObject("idActuel", id);
+        
+        return mv;
+    }
+
+    @Url("/dept/{id}/edit")
+    public ModelView edit(Integer id) {
+        System.out.println("✅ DeptController.edit() - URL dynamique");
+        System.out.println("   id: " + id);
+        
+        ModelView mv = new ModelView("dept_edit.jsp");
+        mv.addObject("message", "Édition du département");
+        mv.addObject("urlPattern", "/dept/{id}/edit");
+        mv.addObject("idActuel", id);
+        
+        return mv;
+    }
 }
