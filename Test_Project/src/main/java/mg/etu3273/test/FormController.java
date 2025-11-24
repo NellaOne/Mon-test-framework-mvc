@@ -1,8 +1,9 @@
 package mg.etu3273.test;
 
-import mg.etu3273.framework.annotation.Controller;
-import mg.etu3273.framework.annotation.Url;
 import mg.etu3273.framework.ModelView;
+import mg.etu3273.framework.annotation.Controller;
+import mg.etu3273.framework.annotation.RequestParam;
+import mg.etu3273.framework.annotation.Url;
 
 @Controller
 public class FormController {
@@ -49,6 +50,39 @@ public class FormController {
         mv.addObject("nombre", nombre);
         mv.addObject("prix", prix);
         mv.addObject("actif", actif);
+        
+        return mv;
+    }
+
+    @Url("/form/submit")
+    public ModelView submitForm(@RequestParam("user_id") Integer id,
+                                 @RequestParam("user_name") String nom,
+                                 @RequestParam("user_email") String email,
+                                 @RequestParam("user_active") Boolean actif) {
+        
+        System.out.println("✅ FormController.submitForm() - Sprint 6-bis");
+        System.out.println("   - user_id → id: " + id);
+        System.out.println("   - user_name → nom: " + nom);
+        System.out.println("   - user_email → email: " + email);
+        System.out.println("   - user_active → actif: " + actif);
+        
+        ModelView mv = new ModelView("form_submit_result.jsp");
+        mv.addObject("titre", "Formulaire Soumis (Sprint 6-bis)");
+        mv.addObject("id", id);
+        mv.addObject("nom", nom);
+        mv.addObject("email", email);
+        mv.addObject("actif", actif);
+        mv.addObject("message", "Toutes les données utilisent @RequestParam !");
+        
+        return mv;
+    }
+
+    @Url("/form/submit/form")
+    public ModelView showSubmitForm() {
+        System.out.println("✅ FormController.showSubmitForm()");
+        
+        ModelView mv = new ModelView("form_submit_form.jsp");
+        mv.addObject("titre", "Formulaire avec @RequestParam");
         
         return mv;
     }
