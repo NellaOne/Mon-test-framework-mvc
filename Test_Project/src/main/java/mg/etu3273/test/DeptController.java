@@ -43,16 +43,6 @@ public class DeptController {
         return mv;
     }
 
-    @Url("/dept/form/add")
-    public ModelView showAddForm() {
-        System.out.println("✅ DeptController.showAddForm()");
-        
-        ModelView mv = new ModelView("dept_form_add.jsp");
-        mv.addObject("titre", "Ajouter un Département");
-        
-        return mv;
-    }
-
     @Url("/dept/save")
     public ModelView saveDept(Integer id, String nom, String localisation, Integer nombreEmployes) {
         System.out.println("✅ DeptController.saveDept() - Sprint 6");
@@ -87,6 +77,18 @@ public class DeptController {
         return mv;
     }
 
+    
+    @Url("/dept/form/add")
+    public ModelView showAddForm() {
+        System.out.println("✅ DeptController.showAddForm()");
+        
+        ModelView mv = new ModelView("dept_form_add.jsp");
+        mv.addObject("titre", "Ajouter un Département");
+        
+        return mv;
+    }
+
+    
     @Url("/dept/{id}")
     public ModelView getDetail(Integer id) {
         System.out.println("✅ DeptController.getDetail() appelé");
@@ -112,4 +114,5 @@ public class DeptController {
         
         return mv;
     }
+
 }

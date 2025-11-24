@@ -1,12 +1,13 @@
 package mg.etu3273.test;
 
+import mg.etu3273.framework.ModelView;
 import mg.etu3273.framework.annotation.Controller;
 import mg.etu3273.framework.annotation.Url;
-import mg.etu3273.framework.ModelView;
 
 @Controller
 public class EtudiantController {
     
+
     @Url("/etudiant/{id}")
     public ModelView getDetail(Integer id) {
         System.out.println("✅ EtudiantController.getDetail() appelé");
@@ -14,15 +15,17 @@ public class EtudiantController {
         
         ModelView mv = new ModelView("etudiant_detail.jsp");
         
+
         mv.addObject("message", "Sprint 3-bis : URL dynamique reconnue !");
         mv.addObject("urlPattern", "/etudiant/{id}");
-        mv.addObject("idRecuActuel", id); 
+        mv.addObject("idRecuActuel", id);
+
+
         mv.addObject("noteImportante", "La valeur du {id} sera extraite dans Sprint 6-ter");
         
         return mv;
     }
     
-
     @Url("/etudiant/liste")
     public ModelView liste() {
         System.out.println("✅ EtudiantController.liste() - URL statique");

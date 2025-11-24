@@ -17,4 +17,6 @@
         <p>Sprint 3-bis : URL dynamique <code>/product/{id}</code> fonctionne !</p>
     </div>
 </body>
+
 </html>
+

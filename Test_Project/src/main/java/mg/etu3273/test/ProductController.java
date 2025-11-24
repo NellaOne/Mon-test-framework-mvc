@@ -1,11 +1,13 @@
 package mg.etu3273.test;
 
+
+import mg.etu3273.framework.ModelView;
 import mg.etu3273.framework.annotation.Controller;
 import mg.etu3273.framework.annotation.Url;
-import mg.etu3273.framework.ModelView;
 
 @Controller
 public class ProductController {
+
     @Url("/product/{id}")
     public ModelView getProduct(Integer id) {
         System.out.println("✅ ProductController.getProduct(" + id + ")");
