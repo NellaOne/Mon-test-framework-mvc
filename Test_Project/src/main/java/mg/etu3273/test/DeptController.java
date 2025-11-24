@@ -5,6 +5,7 @@ import java.util.List;
 
 import mg.etu3273.framework.ModelView;
 import mg.etu3273.framework.annotation.Controller;
+import mg.etu3273.framework.annotation.RequestParam;
 import mg.etu3273.framework.annotation.Url;
 
 @Controller
@@ -111,6 +112,59 @@ public class DeptController {
         mv.addObject("message", "Édition du département");
         mv.addObject("urlPattern", "/dept/{id}/edit");
         mv.addObject("idActuel", id);
+        
+        return mv;
+    }
+
+     @Url("/dept/create")
+    public ModelView createDept(@RequestParam("departement_id") Integer id,
+                                 @RequestParam("departement_nom") String nom,
+                                 @RequestParam("dept_localisation") String localisation,
+                                 @RequestParam("nb_employes") Integer nombreEmployes) {
+        
+        System.out.println("✅ DeptController.createDept() - Sprint 6-bis");
+        System.out.println("   Avec @RequestParam (noms différents):");
+        System.out.println("   - departement_id → id: " + id);
+        System.out.println("   - departement_nom → nom: " + nom);
+        System.out.println("   - dept_localisation → localisation: " + localisation);
+        System.out.println("   - nb_employes → nombreEmployes: " + nombreEmployes);
+        
+        ModelView mv = new ModelView("dept_create_result.jsp");
+        mv.addObject("titre", "Département Créé (Sprint 6-bis)");
+        mv.addObject("id", id);
+        mv.addObject("nom", nom);
+        mv.addObject("localisation", localisation);
+        mv.addObject("nombreEmployes", nombreEmployes);
+        mv.addObject("message", "Créé avec @RequestParam - noms différents !");
+        
+        return mv;
+    }
+
+    @Url("/dept/form/create")
+    public ModelView showCreateForm() {
+        System.out.println("✅ DeptController.showCreateForm()");
+        
+        ModelView mv = new ModelView("dept_form_create.jsp");
+        mv.addObject("titre", "Créer Département (Sprint 6-bis)");
+        
+        return mv;
+    }
+
+    @Url("/dept/update")
+    public ModelView updateDept(@RequestParam("dept_id") Integer id,
+                                 String nom,  // ← Pas de @RequestParam, injection normale
+                                 @RequestParam("new_location") String localisation) {
+        
+        System.out.println("✅ DeptController.updateDept() - Sprint 6-bis (mixte)");
+        System.out.println("   - dept_id → id: " + id);
+        System.out.println("   - nom → nom: " + nom + " (injection normale)");
+        System.out.println("   - new_location → localisation: " + localisation);
+        
+        ModelView mv = new ModelView("dept_update_result.jsp");
+        mv.addObject("id", id);
+        mv.addObject("nom", nom);
+        mv.addObject("localisation", localisation);
+        mv.addObject("message", "Mise à jour avec @RequestParam mixte");
         
         return mv;
     }

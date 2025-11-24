@@ -5,6 +5,7 @@ import java.util.List;
 
 import mg.etu3273.framework.ModelView;
 import mg.etu3273.framework.annotation.Controller;
+import mg.etu3273.framework.annotation.RequestParam;
 import mg.etu3273.framework.annotation.Url;
 
 @Controller
@@ -67,6 +68,35 @@ public class EmployeeController {
         mv.addObject("totalSalaires", totalSalaires);
         mv.addObject("moyenneSalaire", moyenneSalaire);
         mv.addObject("departement", "Informatique");
+        return mv;
+    }
+
+     @Url("/emp/search")
+    public ModelView searchEmployee(@RequestParam("employee_name") String nom,
+                                     @RequestParam("min_age") Integer ageMin,
+                                     @RequestParam("max_age") Integer ageMax) {
+        
+        System.out.println("✅ EmployeeController.searchEmployee() - Sprint 6-bis");
+        System.out.println("   - employee_name → nom: " + nom);
+        System.out.println("   - min_age → ageMin: " + ageMin);
+        System.out.println("   - max_age → ageMax: " + ageMax);
+        
+        ModelView mv = new ModelView("emp_search_result.jsp");
+        mv.addObject("nomRecherche", nom);
+        mv.addObject("ageMin", ageMin);
+        mv.addObject("ageMax", ageMax);
+        mv.addObject("message", "Recherche avec @RequestParam (Sprint 6-bis)");
+        
+        return mv;
+    }
+
+    @Url("/emp/form/search")
+    public ModelView showSearchForm() {
+        System.out.println("✅ EmployeeController.showSearchForm()");
+        
+        ModelView mv = new ModelView("emp_form_search.jsp");
+        mv.addObject("titre", "Rechercher Employé (Sprint 6-bis)");
+        
         return mv;
     }
 }
