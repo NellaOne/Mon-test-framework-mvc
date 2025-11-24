@@ -43,6 +43,52 @@ public class DeptController {
         return mv;
     }
 
+    @Url("/dept/save")
+    public ModelView saveDept(Integer id, String nom, String localisation, Integer nombreEmployes) {
+        System.out.println("✅ DeptController.saveDept() - Sprint 6");
+        System.out.println("   Paramètres injectés:");
+        System.out.println("   - id: " + id);
+        System.out.println("   - nom: " + nom);
+        System.out.println("   - localisation: " + localisation);
+        System.out.println("   - nombreEmployes: " + nombreEmployes);
+        
+        ModelView mv = new ModelView("dept_save_result.jsp");
+        mv.addObject("titre", "Département Enregistré");
+        mv.addObject("id", id);
+        mv.addObject("nom", nom);
+        mv.addObject("localisation", localisation);
+        mv.addObject("nombreEmployes", nombreEmployes);
+        mv.addObject("message", "Département enregistré avec succès (Sprint 6) !");
+        
+        return mv;
+    }
+
+    @Url("/dept/search")
+    public ModelView search(String nom, String localisation) {
+        System.out.println("✅ DeptController.search()");
+        System.out.println("   - nom: " + nom);
+        System.out.println("   - localisation: " + localisation);
+        
+        ModelView mv = new ModelView("dept_search_result.jsp");
+        mv.addObject("nomRecherche", nom);
+        mv.addObject("localisationRecherche", localisation);
+        mv.addObject("message", "Recherche effectuée (Sprint 6)");
+        
+        return mv;
+    }
+
+    
+    @Url("/dept/form/add")
+    public ModelView showAddForm() {
+        System.out.println("✅ DeptController.showAddForm()");
+        
+        ModelView mv = new ModelView("dept_form_add.jsp");
+        mv.addObject("titre", "Ajouter un Département");
+        
+        return mv;
+    }
+
+    
     @Url("/dept/{id}")
     public ModelView getDetail(Integer id) {
         System.out.println("✅ DeptController.getDetail() appelé");
@@ -68,4 +114,5 @@ public class DeptController {
         
         return mv;
     }
+
 }

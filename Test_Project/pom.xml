@@ -6,7 +6,6 @@
     
     <modelVersion>4.0.0</modelVersion>
     
-    <!-- Informations du projet test - CORRIGÉ -->
     <groupId>mg.etu3273</groupId>
     <artifactId>test-framework-mvc</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -15,7 +14,6 @@
     <name>Test Framework MVC</name>
     <description>Projet de test pour le framework MVC custom</description>
     
-    <!-- Propriétés -->
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
@@ -23,16 +21,13 @@
         <failOnMissingWebXml>false</failOnMissingWebXml>
     </properties>
     
-    <!-- Dépendances -->
     <dependencies>
-        <!-- DÉPENDANCE VERS NOTRE FRAMEWORK - CORRIGÉ -->
         <dependency>
             <groupId>mg.etu3273</groupId>
             <artifactId>Mon-framework-mvc</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         
-        <!-- API Servlet Jakarta pour Tomcat 10+ -->
         <dependency>
             <groupId>jakarta.servlet</groupId>
             <artifactId>jakarta.servlet-api</artifactId>
@@ -40,7 +35,6 @@
             <scope>provided</scope>
         </dependency>
         
-        <!-- API JSP Jakarta -->
         <dependency>
             <groupId>jakarta.servlet.jsp</groupId>
             <artifactId>jakarta.servlet.jsp-api</artifactId>
@@ -48,7 +42,6 @@
             <scope>provided</scope>
         </dependency>
         
-        <!-- JSTL Jakarta (pour les JSP, optionnel) -->
         <dependency>
             <groupId>org.glassfish.web</groupId>
             <artifactId>jakarta.servlet.jsp.jstl</artifactId>
@@ -62,10 +55,8 @@
         </dependency>
     </dependencies>
     
-    <!-- Configuration de build -->
     <build>
         <plugins>
-            <!-- Plugin de compilation -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -74,10 +65,10 @@
                     <source>11</source>
                     <target>11</target>
                     <encoding>UTF-8</encoding>
+                    <parameters>true</parameters>
                 </configuration>
             </plugin>
             
-            <!-- Plugin WAR (pour créer le fichier WAR déployable) -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
@@ -93,7 +84,6 @@
             </plugin>
         </plugins>
         
-        <!-- Nom final du WAR -->
         <finalName>test-framework-mvc</finalName>
     </build>
 </project>

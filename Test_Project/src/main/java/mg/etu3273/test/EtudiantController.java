@@ -6,6 +6,8 @@ import mg.etu3273.framework.annotation.Url;
 
 @Controller
 public class EtudiantController {
+    
+
     @Url("/etudiant/{id}")
     public ModelView getDetail(Integer id) {
         System.out.println("✅ EtudiantController.getDetail() appelé");
@@ -13,10 +15,12 @@ public class EtudiantController {
         
         ModelView mv = new ModelView("etudiant_detail.jsp");
         
-        // Pour l'instant on affiche juste que ça marche
+
         mv.addObject("message", "Sprint 3-bis : URL dynamique reconnue !");
         mv.addObject("urlPattern", "/etudiant/{id}");
-        mv.addObject("idRecuActuel", id); // null pour l'instant
+        mv.addObject("idRecuActuel", id);
+
+
         mv.addObject("noteImportante", "La valeur du {id} sera extraite dans Sprint 6-ter");
         
         return mv;
