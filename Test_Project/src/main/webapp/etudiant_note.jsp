@@ -18,6 +18,9 @@
         <div class="info">
             <h3>URL avec 2 paramètres dynamiques</h3>
             <p><strong>Pattern :</strong> <code>${urlPattern}</code></p>
+             <p><strong>Valeur du paramètre id :</strong> 
+                <span class="code">${idRecuActuel == null ? 'null (normal pour Sprint 3-bis)' : idRecuActuel}</span>
+            </p>
             <p>Cette URL peut matcher par exemple :</p>
             <ul>
                 <li>/etudiant/17/notes/math</li>

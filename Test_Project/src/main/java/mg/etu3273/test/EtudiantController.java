@@ -45,6 +45,7 @@ public class EtudiantController {
         mv.addObject("message", "Sprint 3-bis : URL avec 2 paramètres dynamiques !");
         mv.addObject("urlPattern", "/etudiant/{id}/notes/{matiere}");
         
+        mv.addObject("idRecuActuel", id);
         return mv;
     }
 }
