@@ -1,5 +1,7 @@
 package mg.etu3273.test;
 
+import java.util.Map;
+
 import mg.etu3273.framework.ModelView;
 import mg.etu3273.framework.annotation.Controller;
 import mg.etu3273.framework.annotation.RequestParam;
@@ -92,4 +94,49 @@ public class TestController {
         mv.addObject("extra", "Matière : " + matiere);
         return mv;
     }
+
+     @Url("/test/save-map")
+    public ModelView saveWithMap(Map<String, Object> params) {
+        System.out.println("📦 SPRINT 8 - Paramètres reçus dans Map:");
+        
+        // Extraire les valeurs depuis la Map
+        String nom = (String) params.get("nom");
+        String ageStr = (String) params.get("age");
+        String ville = (String) params.get("ville");
+        
+        // Conversion manuelle si nécessaire
+        Integer age = ageStr != null ? Integer.parseInt(ageStr) : null;
+        
+        // Afficher tous les paramètres reçus
+        for (Map.Entry<String, Object> entry : params.entrySet()) {
+            System.out.println("   - " + entry.getKey() + " = " + entry.getValue());
+        }
+        
+        ModelView mv = new ModelView("test_result.jsp");
+        mv.addObject("titre", "Sprint 8 : Map<String, Object>");
+        mv.addObject("nom", nom);
+        mv.addObject("age", age);
+        mv.addObject("ville", ville);
+        mv.addObject("sprint", "Sprint 8 - Map<String, Object> (TOUS les params)");
+        return mv;
+    }
+
+    @Url("/test/save-mixed")
+    public ModelView saveMixed(Map<String, Object> params, @RequestParam("priority") String priority) {
+        System.out.println("📦 SPRINT 8 - Mode mixte:");
+        System.out.println("   Map contient: " + params.keySet());
+        System.out.println("   Paramètre priority: " + priority);
+        
+        String nom = (String) params.get("nom");
+        String ville = (String) params.get("ville");
+        
+        ModelView mv = new ModelView("test_result.jsp");
+        mv.addObject("titre", "Sprint 8 : Mode Mixte");
+        mv.addObject("nom", nom);
+        mv.addObject("age", "N/A");
+        mv.addObject("ville", ville);
+        mv.addObject("sprint", "Sprint 8 - Map + @RequestParam (Priority: " + priority + ")");
+        return mv;
+    }
+
 }
