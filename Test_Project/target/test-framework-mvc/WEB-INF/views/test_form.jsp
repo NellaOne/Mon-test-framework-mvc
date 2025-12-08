@@ -17,7 +17,7 @@
 <body>
     <div class="box">
         <h1>📝 ${titre}</h1>
-        <form action="/test-framework-mvc/test/save-map" method="post">
+        <form action="/test-framework-mvc/test/save" method="post">
             <div class="form-group">
                 <label>Nom :</label>
                 <input type="text" name="nom" required>

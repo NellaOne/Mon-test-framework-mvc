@@ -95,48 +95,99 @@ public class TestController {
         return mv;
     }
 
-     @Url("/test/save-map")
-    public ModelView saveWithMap(Map<String, Object> params) {
-        System.out.println("📦 SPRINT 8 - Paramètres reçus dans Map:");
-        
-        // Extraire les valeurs depuis la Map
-        String nom = (String) params.get("nom");
-        String ageStr = (String) params.get("age");
-        String ville = (String) params.get("ville");
-        
-        // Conversion manuelle si nécessaire
-        Integer age = ageStr != null ? Integer.parseInt(ageStr) : null;
-        
-        // Afficher tous les paramètres reçus
-        for (Map.Entry<String, Object> entry : params.entrySet()) {
-            System.out.println("   - " + entry.getKey() + " = " + entry.getValue());
-        }
-        
-        ModelView mv = new ModelView("test_result.jsp");
-        mv.addObject("titre", "Sprint 8 : Map<String, Object>");
-        mv.addObject("nom", nom);
-        mv.addObject("age", age);
-        mv.addObject("ville", ville);
-        mv.addObject("sprint", "Sprint 8 - Map<String, Object> (TOUS les params)");
+
+    @Url("/test/sprint8-form")
+    public ModelView showSprint8Form() {
+        ModelView mv = new ModelView("sprint8_form.jsp");
+        mv.addObject("titre", "Sprint 8 : Formulaire avec Checkboxes");
         return mv;
     }
 
-    @Url("/test/save-mixed")
+    /* @Url("/test/save-map")
+    public ModelView saveWithMap(Map<String, Object> params) {
+        System.out.println("📦 SPRINT 8 - Paramètres reçus dans Map:");
+        
+        String nom = (String) params.get("nom");
+        String ageStr = (String) params.get("age");
+        Integer age = ageStr != null ? Integer.parseInt(ageStr) : null;
+        
+        Object villeObj = params.get("ville");
+        
+        for (Map.Entry<String, Object> entry : params.entrySet()) {
+            Object value = entry.getValue();
+            if (value instanceof String[]) {
+                System.out.println("   - " + entry.getKey() + " = " + 
+                                String.join(", ", (String[]) value) + " (tableau)");
+            } else {
+                System.out.println("   - " + entry.getKey() + " = " + value);
+            }
+        }
+        
+        ModelView mv = new ModelView("sprint8_result.jsp");
+        mv.addObject("titre", "Sprint 8 : Map<String, Object>");
+        mv.addObject("nom", nom);
+        mv.addObject("age", age);
+        mv.addObject("ville", villeObj); // ✅ On envoie l'objet tel quel à la JSP
+        mv.addObject("sprint", "Sprint 8 - Map<String, Object>");
+        return mv;
+    } */
+
+  /*   @Url("/test/save-mixed")
     public ModelView saveMixed(Map<String, Object> params, @RequestParam("priority") String priority) {
         System.out.println("📦 SPRINT 8 - Mode mixte:");
         System.out.println("   Map contient: " + params.keySet());
         System.out.println("   Paramètre priority: " + priority);
         
         String nom = (String) params.get("nom");
-        String ville = (String) params.get("ville");
+        String ageStr = (String) params.get("age");
+        Integer age = ageStr != null ? Integer.parseInt(ageStr) : null;
+        Object villeObj = params.get("ville");
         
-        ModelView mv = new ModelView("test_result.jsp");
+        ModelView mv = new ModelView("sprint8_result.jsp");
         mv.addObject("titre", "Sprint 8 : Mode Mixte");
         mv.addObject("nom", nom);
-        mv.addObject("age", "N/A");
-        mv.addObject("ville", ville);
+        mv.addObject("age", age);
+        mv.addObject("ville", villeObj);
         mv.addObject("sprint", "Sprint 8 - Map + @RequestParam (Priority: " + priority + ")");
+        return mv;
+    } */
+
+    @Url("/test/save-map")
+    public ModelView saveWithMap(Map<String, Object> params) {
+        ModelView mv = new ModelView("sprint8_result.jsp");
+        mv.addObject("titre", "Sprint 8 : Map<String, Object>");
+        mv.addObject("data", params); 
+        mv.addObject("sprint", "Sprint 8 - Injection automatique dans Map");
         return mv;
     }
 
+    @Url("/test/save-mixed")
+public ModelView saveMixed(Map<String, Object> params, String priority) {
+    ModelView mv = new ModelView("sprint8_result_mixed.jsp");
+    mv.addObject("titre", "Sprint 8 : Mode Mixte");
+    mv.addObject("data", params);
+    mv.addObject("priority", priority);
+    mv.addObject("sprint", "Sprint 8 - Map + paramètre simple");
+    return mv;
 }
+
+@Url("/test/save-advanced")
+public ModelView saveAdvanced(Map<String, Object> params, Integer id, String action) {
+    System.out.println("📦 SPRINT 8 - Mode avancé:");
+    System.out.println("   - Map: " + params.keySet());
+    System.out.println("   - ID: " + id);
+    System.out.println("   - Action: " + action);
+    
+    ModelView mv = new ModelView("sprint8_result_mixed.jsp");
+    mv.addObject("titre", "Sprint 8 : Mode Avancé");
+    mv.addObject("data", params);
+    mv.addObject("id", id);
+    mv.addObject("action", action);
+    mv.addObject("sprint", "Sprint 8 - Map + plusieurs paramètres");
+    return mv;
+}
+
+}
+
+
+
