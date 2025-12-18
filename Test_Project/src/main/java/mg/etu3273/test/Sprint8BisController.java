@@ -20,7 +20,7 @@ public class Sprint8BisController {
 
     @PostUrl("/sprint8bis/save-simple")
     public ModelView saveSimple(Employee e) {
-        System.out.println("📦 SPRINT 8-bis - Objet reçu: " + e);
+        System.out.println(" SPRINT 8-bis - Objet reçu: " + e);
         
         ModelView mv = new ModelView("sprint8bis_result.jsp");
         mv.addObject("titre", "Sprint 8-bis : Objet simple");
@@ -39,7 +39,7 @@ public class Sprint8BisController {
 
     @PostUrl("/sprint8bis/save-nested")
     public ModelView saveNested(Employee e) {
-        System.out.println("📦 SPRINT 8-bis - Objet avec imbriqué reçu: " + e);
+        System.out.println(" SPRINT 8-bis - Objet avec imbriqué reçu: " + e);
         System.out.println("   - Employee: " + e.getNom());
         System.out.println("   - Department: " + (e.getDepartment() != null ? e.getDepartment().getNom() : "null"));
         
@@ -59,7 +59,7 @@ public class Sprint8BisController {
 
     @PostUrl("/sprint8bis/save-multiple")
     public ModelView saveMultiple(Employee e, Department d, Integer id) {
-        System.out.println("📦 SPRINT 8-bis - Plusieurs objets reçus:");
+        System.out.println(" SPRINT 8-bis - Plusieurs objets reçus:");
         System.out.println("   - Employee: " + e);
         System.out.println("   - Department: " + d);
         System.out.println("   - ID: " + id);
@@ -68,6 +68,7 @@ public class Sprint8BisController {
         mv.addObject("titre", "Sprint 8-bis : Plusieurs objets");
         mv.addObject("employee", e);
         mv.addObject("department", d);
+        
         mv.addObject("id", id);
         mv.addObject("sprint", "Sprint 8-bis - Plusieurs objets simultanés");
         return mv;
@@ -82,7 +83,7 @@ public class Sprint8BisController {
 
     @PostUrl("/sprint8bis/save-list")
     public ModelView saveList(Employee e) {
-        System.out.println("📦 SPRINT 8-bis - Objet avec liste reçu: " + e);
+        System.out.println(" SPRINT 8-bis - Objet avec liste reçu: " + e);
         System.out.println("   - Hobbies: " + e.getHobbies());
         
         ModelView mv = new ModelView("sprint8bis_result.jsp");
@@ -101,7 +102,7 @@ public class Sprint8BisController {
 
     @PostUrl("/sprint8bis/save-complete")
     public ModelView saveComplete(Employee e) {
-        System.out.println("📦 SPRINT 8-bis - Test complet:");
+        System.out.println(" SPRINT 8-bis - Test complet:");
         System.out.println("   - Employee: " + e.getNom() + ", " + e.getAge() + " ans");
         System.out.println("   - Salaire: " + e.getSalaire());
         System.out.println("   - Department: " + (e.getDepartment() != null ? e.getDepartment().getNom() : "null"));

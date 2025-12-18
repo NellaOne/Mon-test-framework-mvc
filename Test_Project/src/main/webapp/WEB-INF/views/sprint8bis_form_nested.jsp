@@ -20,10 +20,10 @@
 </head>
 <body>
     <div class="box">
-        <h1>🚀 ${titre}</h1>
+        <h1>${titre}</h1>
         
         <div class="info">
-            <strong>🎯 Sprint 8-bis - Test 2 :</strong> Binding d'objet avec objet imbriqué<br>
+            <strong> Sprint 8-bis - Test 2 :</strong> Binding d'objet avec objet imbriqué<br>
             Le framework va créer <code>Employee</code> ET son <code>Department</code> automatiquement !
         </div>
 
@@ -37,7 +37,7 @@
         </div>
 
         <form action="/test-framework-mvc/sprint8bis/save-nested" method="POST">
-            <h3>👤 Informations de l'employé</h3>
+            <h3> Informations de l'employé</h3>
             <div class="form-group">
                 <label>Nom (e.nom) :</label>
                 <input type="text" name="e.nom" value="Rasoa Rakoto" required>
@@ -54,7 +54,7 @@
             </div>
 
             <div class="nested-section">
-                <h3 style="margin-top:0">🏢 Département de l'employé</h3>
+                <h3 style="margin-top:0"> Département de l'employé</h3>
                 
                 <div class="form-group">
                     <label>Nom du département (e.department.nom) :</label>
@@ -72,16 +72,16 @@
                 </div>
             </div>
             
-            <button type="submit">💾 Enregistrer (avec objet imbriqué)</button>
+            <button type="submit"> Enregistrer (avec objet imbriqué)</button>
         </form>
 
         <div style="margin-top:20px;background:#e7f3ff;padding:15px;border-radius:8px">
-            <strong>✨ Magie du framework :</strong>
+            <strong> Magie du framework :</strong>
             <ul style="margin:10px 0">
-                <li>✅ Détecte que <code>e.department</code> est un objet imbriqué</li>
-                <li>✅ Crée automatiquement <code>new Department()</code></li>
-                <li>✅ Remplit <code>department.nom</code>, <code>department.code</code>, etc.</li>
-                <li>✅ Associe le département à l'employé avec <code>e.setDepartment(d)</code></li>
+                <li> Détecte que <code>e.department</code> est un objet imbriqué</li>
+                <li> Crée automatiquement <code>new Department()</code></li>
+                <li> Remplit <code>department.nom</code>, <code>department.code</code>, etc.</li>
+                <li> Associe le département à l'employé avec <code>e.setDepartment(d)</code></li>
             </ul>
         </div>
 

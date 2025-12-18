@@ -19,7 +19,7 @@
             <p><strong>ID extrait :</strong> ${id}</p>
             ${extra != null ? '<p><strong>Extra :</strong> '.concat(extra).concat('</p>') : ''}
         </div>
-        <p>✅ Sprint 6-ter : Valeur extraite depuis l'URL avec {}</p>
+        <p> Sprint 6-ter : Valeur extraite depuis l'URL avec {}</p>
         <p>Exemples : /test/17, /test/25, /test/100</p>
     </div>
 </body>

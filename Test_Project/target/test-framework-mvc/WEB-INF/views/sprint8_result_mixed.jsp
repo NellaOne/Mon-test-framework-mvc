@@ -18,12 +18,12 @@
 </head>
 <body>
     <div class="box">
-        <h1>✅ ${titre}</h1>
+        <h1> ${titre}</h1>
         <span class="badge">${sprint}</span>
         
         <!-- Paramètres séparés (hors Map) -->
         <div class="separate-param">
-            <h3 style="margin-top:0">📌 Paramètres individuels (hors Map) :</h3>
+            <h3 style="margin-top:0"> Paramètres individuels (hors Map) :</h3>
             <% if (request.getAttribute("priority") != null) { %>
                 <p><strong>Priority :</strong> ${priority}</p>
             <% } %>
@@ -80,11 +80,11 @@
         </table>
         
         <div style="background:#e7f3ff;padding:15px;border-radius:8px;margin:20px 0">
-            <strong>✅ Sprint 8 - Mode Mixte :</strong>
+            <strong> Sprint 8 - Mode Mixte :</strong>
             <ul style="margin:10px 0">
-                <li>✅ Map contient tous les paramètres SAUF ceux déclarés individuellement</li>
-                <li>✅ Pas besoin de @RequestParam pour les paramètres simples</li>
-                <li>✅ Le framework gère l'injection automatiquement</li>
+                <li> Map contient tous les paramètres SAUF ceux déclarés individuellement</li>
+                <li> Pas besoin de @RequestParam pour les paramètres simples</li>
+                <li> Le framework gère l'injection automatiquement</li>
             </ul>
         </div>
         

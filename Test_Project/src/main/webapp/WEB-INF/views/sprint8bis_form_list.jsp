@@ -21,10 +21,10 @@
 </head>
 <body>
     <div class="box">
-        <h1>🚀 ${titre}</h1>
+        <h1> ${titre}</h1>
         
         <div class="info">
-            <strong>🎯 Sprint 8-bis - Test 4 :</strong> Binding de listes/tableaux<br>
+            <strong> Sprint 8-bis - Test 4 :</strong> Binding de listes/tableaux<br>
             Le framework va remplir automatiquement <code>List&lt;String&gt; hobbies</code> !
         </div>
 
@@ -68,7 +68,7 @@
                 </div>
             </div>
             
-            <button type="submit">💾 Enregistrer (avec liste)</button>
+            <button type="submit"> Enregistrer (avec liste)</button>
         </form>
 
         <div style="margin-top:20px;background:#fff3cd;padding:15px;border-radius:8px;border-left:4px solid#f39c12">
@@ -81,12 +81,12 @@
         </div>
 
         <div style="margin-top:20px;background:#e7f3ff;padding:15px;border-radius:8px">
-            <strong>✨ Magie du framework :</strong>
+            <strong> Magie du framework :</strong>
             <ul style="margin:10px 0">
-                <li>✅ Détecte que <code>hobbies</code> est une <code>List&lt;String&gt;</code></li>
-                <li>✅ Récupère toutes les valeurs cochées</li>
-                <li>✅ Crée automatiquement une <code>ArrayList&lt;&gt;()</code></li>
-                <li>✅ L'associe à l'employé avec <code>e.setHobbies(list)</code></li>
+                <li> Détecte que <code>hobbies</code> est une <code>List&lt;String&gt;</code></li>
+                <li> Récupère toutes les valeurs cochées</li>
+                <li> Crée automatiquement une <code>ArrayList&lt;&gt;()</code></li>
+                <li> L'associe à l'employé avec <code>e.setHobbies(list)</code></li>
             </ul>
         </div>
 

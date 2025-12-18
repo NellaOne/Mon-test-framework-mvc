@@ -19,11 +19,11 @@
 </head>
 <body>
     <div class="box">
-        <h1>✅ ${titre}</h1>
+        <h1> ${titre}</h1>
         <span class="badge">${sprint}</span>
 
         <div style="background:#d1f2eb;padding:15px;border-radius:8px;margin:20px 0;border-left:4px solid #27ae60">
-            <strong>🎯 Sprint 8-bis - Test 3 :</strong> Le framework a reçu <strong>3 objets différents</strong> simultanément !
+            <strong> Sprint 8-bis - Test 3 :</strong> Le framework a reçu <strong>3 objets différents</strong> simultanément !
         </div>
 
         <%
@@ -82,6 +82,15 @@
         </div>
         <% } %>
 
+        <!-- DEBUG : Afficher tous les attributs -->
+        <div style="background:yellow;padding:10px;margin:20px 0">
+            <strong>DEBUG - Attributs disponibles :</strong><br>
+            employee: <%= request.getAttribute("employee") %><br>
+            department: <%= request.getAttribute("department") %><br>
+            id: <%= request.getAttribute("id") %><br>
+            id == null ? <%= (request.getAttribute("id") == null) %><br>
+        </div>
+
         <!-- Paramètre 3 : Integer -->
         <% if (id != null) { %>
         <div class="object-section" style="border-left-color:#e74c3c">
@@ -92,7 +101,7 @@
         <% } %>
 
         <div style="background:#e7f3ff;padding:20px;border-radius:8px;margin:20px 0">
-            <strong>✅ Sprint 8-bis : Injection réussie !</strong>
+            <strong> Sprint 8-bis : Injection réussie !</strong>
             <ol style="margin:15px 0;line-height:1.8">
                 <li>Le framework a analysé la signature : <code>save(Employee e, Department d, Integer id)</code></li>
                 <li>Il a détecté 3 paramètres de types différents</li>

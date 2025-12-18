@@ -19,10 +19,10 @@
 </head>
 <body>
     <div class="box">
-        <h1>🚀 ${titre}</h1>
+        <h1> ${titre}</h1>
         
         <div class="info">
-            <strong>🎯 Sprint 8-bis - Test 1 :</strong> Binding d'un objet simple<br>
+            <strong> Sprint 8-bis - Test 1 :</strong> Binding d'un objet simple<br>
             Le framework va automatiquement créer une instance d'Employee et remplir ses attributs !
         </div>
 
@@ -48,16 +48,16 @@
                 <input type="number" step="0.01" name="e.salaire" value="2500000" required>
             </div>
             
-            <button type="submit">💾 Enregistrer (binding automatique)</button>
+            <button type="submit"> Enregistrer (binding automatique)</button>
         </form>
 
         <div style="margin-top:20px;background:#e7f3ff;padding:15px;border-radius:8px">
-            <strong>✨ Magie du framework :</strong>
+            <strong> Magie du framework :</strong>
             <ul style="margin:10px 0">
-                <li>✅ Le framework détecte que <code>e</code> est un objet personnalisé</li>
-                <li>✅ Il crée automatiquement une instance d'<code>Employee</code></li>
-                <li>✅ Il remplit <code>e.nom</code>, <code>e.age</code>, <code>e.salaire</code></li>
-                <li>✅ Il convertit les types (String → Integer, String → Double)</li>
+                <li> Le framework détecte que <code>e</code> est un objet personnalisé</li>
+                <li> Il crée automatiquement une instance d'<code>Employee</code></li>
+                <li> Il remplit <code>e.nom</code>, <code>e.age</code>, <code>e.salaire</code></li>
+                <li> Il convertit les types (String → Integer, String → Double)</li>
             </ul>
         </div>
 

@@ -21,7 +21,7 @@
 </head>
 <body>
     <div class="box">
-        <h1>✅ ${titre}</h1>
+        <h1> ${titre}</h1>
         <span class="badge">${sprint}</span>
         
         <%
@@ -98,17 +98,17 @@
         </div>
         
         <div style="background:#e7f3ff;padding:15px;border-radius:8px;margin:20px 0">
-            <strong>✅ Sprint 8-bis : Ce qui s'est passé :</strong>
+            <strong> Sprint 8-bis : Ce qui s'est passé :</strong>
             <ul style="margin:10px 0">
-                <li>✅ Le framework a détecté que <code>Employee e</code> est un objet personnalisé</li>
-                <li>✅ Il a créé une nouvelle instance avec <code>new Employee()</code></li>
-                <li>✅ Il a rempli automatiquement tous les attributs depuis le formulaire</li>
-                <li>✅ Il a converti les types (String → Integer, String → Double)</li>
+                <li> Le framework a détecté que <code>Employee e</code> est un objet personnalisé</li>
+                <li> Il a créé une nouvelle instance avec <code>new Employee()</code></li>
+                <li> Il a rempli automatiquement tous les attributs depuis le formulaire</li>
+                <li> Il a converti les types (String → Integer, String → Double)</li>
                 <% if (dept != null) { %>
-                <li>✅ Il a créé et rempli l'objet imbriqué <code>Department</code></li>
+                <li> Il a créé et rempli l'objet imbriqué <code>Department</code></li>
                 <% } %>
                 <% if (hobbies != null && !hobbies.isEmpty()) { %>
-                <li>✅ Il a créé et rempli la liste <code>List&lt;String&gt;</code></li>
+                <li> Il a créé et rempli la liste <code>List&lt;String&gt;</code></li>
                 <% } %>
             </ul>
         </div>

@@ -1,8 +1,6 @@
 package mg.etu3273.test.model;
 
-/**
- * 🆕 SPRINT 8-bis : Classe Department pour tester le binding d'objets
- */
+
 public class Department {
     private String nom;
     private String code;

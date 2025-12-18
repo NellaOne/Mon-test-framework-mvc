@@ -22,20 +22,20 @@
 </head>
 <body>
     <div class="box">
-        <h1>🚀 ${titre}</h1>
+        <h1> ${titre}</h1>
         
         <div class="info">
-            <strong style="font-size:18px">🎯 Sprint 8-bis - Test 5 : TEST COMPLET</strong><br><br>
+            <strong style="font-size:18px"> Sprint 8-bis - Test 5 : TEST COMPLET</strong><br><br>
             Ce formulaire combine <strong>TOUS les types de binding</strong> :<br>
-            ✅ Objet simple<br>
-            ✅ Objet imbriqué (Department)<br>
-            ✅ Liste (Hobbies)<br>
-            ✅ Conversion de types automatique
+             Objet simple<br>
+             Objet imbriqué (Department)<br>
+             Liste (Hobbies)<br>
+             Conversion de types automatique
         </div>
 
         <form action="/test-framework-mvc/sprint8bis/save-complete" method="POST">
             <div class="section">
-                <h3 style="margin-top:0;color:#667eea">👤 Informations personnelles</h3>
+                <h3 style="margin-top:0;color:#667eea"> Informations personnelles</h3>
                 
                 <div class="form-group">
                     <label>Nom complet (e.nom) :</label>
@@ -54,7 +54,7 @@
             </div>
 
             <div class="section" style="border-left-color:#3498db">
-                <h3 style="margin-top:0;color:#3498db">🏢 Département (objet imbriqué)</h3>
+                <h3 style="margin-top:0;color:#3498db"> Département (objet imbriqué)</h3>
                 
                 <div class="form-group">
                     <label>Nom du département (e.department.nom) :</label>
@@ -73,7 +73,7 @@
             </div>
 
             <div class="section" style="border-left-color:#e74c3c">
-                <h3 style="margin-top:0;color:#e74c3c">🎯 Centres d'intérêt (liste)</h3>
+                <h3 style="margin-top:0;color:#e74c3c"> Centres d'intérêt (liste)</h3>
                 
                 <div class="checkbox-group">
                     <label class="checkbox-item">
@@ -94,7 +94,7 @@
                 </div>
             </div>
             
-            <button type="submit">💾 Enregistrer (Test Complet)</button>
+            <button type="submit"> Enregistrer (Test Complet)</button>
         </form>
 
         <div style="margin-top:30px;background:#d4edda;padding:20px;border-radius:8px;border-left:4px solid#27ae60">
@@ -113,7 +113,7 @@
                 <li>Associe : <code>e.setHobbies(list)</code></li>
                 <li>Invoque le contrôleur : <code>controller.saveComplete(e)</code></li>
             </ol>
-            <strong style="color:#27ae60">✅ TOUT ÇA SANS UNE SEULE LIGNE DE CODE DU DÉVELOPPEUR !</strong>
+            <strong style="color:#27ae60"> TOUT ÇA SANS UNE SEULE LIGNE DE CODE DU DÉVELOPPEUR !</strong>
         </div>
 
         <p style="margin-top:20px;text-align:center">
@@ -122,3 +122,5 @@
     </div>
 </body>
 </html>
+
+

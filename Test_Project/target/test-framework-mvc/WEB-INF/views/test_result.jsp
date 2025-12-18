@@ -14,14 +14,14 @@
 </head>
 <body>
     <div class="box">
-        <h1>✅ ${titre}</h1>
+        <h1> ${titre}</h1>
         <span class="badge">${sprint}</span>
         <div class="success">
             <p><strong>Nom :</strong> ${nom}</p>
             <p><strong>Âge :</strong> ${age}</p>
             <p><strong>Ville :</strong> ${ville}</p>
         </div>
-        <p>✅ Données injectées automatiquement dans la méthode du contrôleur</p>
+        <p> Données injectées automatiquement dans la méthode du contrôleur</p>
         <a href="/test-framework-mvc/test/form" style="color:#3498db">← Retour</a>
     </div>
 </body>

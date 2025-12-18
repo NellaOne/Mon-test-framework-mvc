@@ -20,10 +20,10 @@
 </head>
 <body>
     <div class="box">
-        <h1>🚀 ${titre}</h1>
+        <h1> ${titre}</h1>
         
         <div class="info">
-            <strong>🎯 Sprint 8-bis - Test 3 :</strong> Plusieurs objets simultanément<br>
+            <strong> Sprint 8-bis - Test 3 :</strong> Plusieurs objets simultanément<br>
             Le framework va créer et remplir <strong>3 objets différents</strong> en parallèle !
         </div>
 
@@ -39,7 +39,6 @@
 
         <form action="/test-framework-mvc/sprint8bis/save-multiple" method="POST">
             
-            <!-- Section Employee -->
             <div class="section" style="border-left:4px solid #e74c3c">
                 <h3 style="margin-top:0;color:#e74c3c">👤 Objet 1 : Employee</h3>
                 
@@ -59,7 +58,6 @@
                 </div>
             </div>
 
-            <!-- Section Department -->
             <div class="section" style="border-left:4px solid #3498db">
                 <h3 style="margin-top:0;color:#3498db">🏢 Objet 2 : Department</h3>
                 
@@ -79,7 +77,6 @@
                 </div>
             </div>
 
-            <!-- Section ID -->
             <div class="section" style="border-left:4px solid #f39c12">
                 <h3 style="margin-top:0;color:#f39c12">🔢 Paramètre 3 : Integer</h3>
                 
@@ -89,19 +86,19 @@
                 </div>
             </div>
             
-            <button type="submit">💾 Enregistrer (3 objets simultanés)</button>
+            <button type="submit"> Enregistrer (3 objets simultanés)</button>
         </form>
 
         <div style="margin-top:20px;background:#e7f3ff;padding:15px;border-radius:8px">
-            <strong>✨ Magie du framework :</strong>
+            <strong> Magie du framework :</strong>
             <ul style="margin:10px 0">
-                <li>✅ Détecte 3 paramètres dans la méthode du contrôleur</li>
-                <li>✅ Crée : <code>Employee e = new Employee()</code></li>
-                <li>✅ Remplit e depuis les champs <code>e.nom</code>, <code>e.age</code>, etc.</li>
-                <li>✅ Crée : <code>Department d = new Department()</code></li>
-                <li>✅ Remplit d depuis les champs <code>d.nom</code>, <code>d.code</code>, etc.</li>
-                <li>✅ Récupère <code>id</code> et le convertit en Integer</li>
-                <li>✅ Invoque : <code>controller.saveMultiple(e, d, id)</code></li>
+                <li> Détecte 3 paramètres dans la méthode du contrôleur</li>
+                <li> Crée : <code>Employee e = new Employee()</code></li>
+                <li> Remplit e depuis les champs <code>e.nom</code>, <code>e.age</code>, etc.</li>
+                <li> Crée : <code>Department d = new Department()</code></li>
+                <li> Remplit d depuis les champs <code>d.nom</code>, <code>d.code</code>, etc.</li>
+                <li> Récupère <code>id</code> et le convertit en Integer</li>
+                <li> Invoque : <code>controller.saveMultiple(e, d, id)</code></li>
             </ul>
         </div>
 
