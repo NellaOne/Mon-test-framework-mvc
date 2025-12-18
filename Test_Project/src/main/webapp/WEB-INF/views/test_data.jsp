@@ -13,13 +13,13 @@
 </head>
 <body>
     <div class="box">
-        <h1>✅ ${titre}</h1>
+        <h1> ${titre}</h1>
         <div class="data">
             <p><strong>Nom :</strong> ${nom}</p>
             <p><strong>Âge :</strong> ${age} ans</p>
             <p><strong>Ville :</strong> ${ville}</p>
         </div>
-        <p>✅ Sprint 5 : Données transférées via <code>addObject()</code></p>
+        <p> Sprint 5 : Données transférées via <code>addObject()</code></p>
     </div>
 </body>
 </html>

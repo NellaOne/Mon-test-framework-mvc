@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="box">
-        <h1>✅ ${titre}</h1>
+        <h1> ${titre}</h1>
         <span class="badge">Sprint 4-bis</span>
         <p>${message}</p>
         <p>Cette page JSP est affichée via <strong>ModelView</strong></p>

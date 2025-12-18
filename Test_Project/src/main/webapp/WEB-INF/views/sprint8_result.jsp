@@ -16,10 +16,10 @@
 </head>
 <body>
     <div class="box">
-        <h1>✅ ${titre}</h1>
+        <h1> ${titre}</h1>
         <span class="badge">${sprint}</span>
         
-        <h3>📋 Tous les paramètres reçus :</h3>
+        <h3> Tous les paramètres reçus :</h3>
         <table>
             <tr>
                 <th>Paramètre</th>
@@ -62,12 +62,12 @@
             %>
         </table>
         <div class="info">
-            <strong>✅ Sprint 8 : Avantages</strong>
+            <strong> Sprint 8 : Avantages</strong>
             <ul style="margin:10px 0">
-                <li>✅ Aucun casting nécessaire dans le contrôleur</li>
-                <li>✅ Tous les paramètres automatiquement dans la Map</li>
-                <li>✅ Checkboxes multiples → String[] automatique</li>
-                <li>✅ Le développeur fait juste <code>mv.addObject("data", params)</code></li>
+                <li> Aucun casting nécessaire dans le contrôleur</li>
+                <li> Tous les paramètres automatiquement dans la Map</li>
+                <li> Checkboxes multiples → String[] automatique</li>
+                <li> Le développeur fait juste <code>mv.addObject("data", params)</code></li>
             </ul>
         </div> 
         <p><a href="/test-framework-mvc/test/sprint8-form" style="color:#27ae60;font-weight:bold">← Retour au formulaire</a></p>

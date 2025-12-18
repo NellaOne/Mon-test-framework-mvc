@@ -24,14 +24,13 @@
 </head>
 <body>
     <div class="box">
-        <h1>🚀 ${titre}</h1>
+        <h1> ${titre}</h1>
         
         <div class="info">
-            <strong>🎯 Sprint 8 :</strong> Tous les paramètres du formulaire seront automatiquement 
+            <strong> Sprint 8 :</strong> Tous les paramètres du formulaire seront automatiquement 
             copiés dans une <code>Map&lt;String, Object&gt;</code> ! Le framework gère tout.
         </div>
 
-        <!-- ========== TEST 1 : Map seule ========== -->
         <h3>Test 1 : Map&lt;String, Object&gt; uniquement</h3>
         <form action="save-map" method="post">
             <div class="form-group">
@@ -62,12 +61,11 @@
                 </div>
             </div>
             
-            <button type="submit">💾 Test avec Map seule</button>
+            <button type="submit"> Test avec Map seule</button>
         </form>
 
-        <!-- ========== TEST 2 : Map + @RequestParam ========== -->
         <div class="test-section">
-            <h3>Test 2 : Map + @RequestParam (Mode mixte) SANS @RequestParam)</h3>
+            <h3>Test 2 : Map + @RequestParam (Mode mixte) SANS @RequestParam</h3>
             <form action="save-mixed" method="post">
                 <div class="form-group">
                     <label>Nom :</label>
@@ -100,7 +98,7 @@
                     </select>
                 </div>
                 
-                <button type="submit">💾 Test mode mixte (simple)</button>
+                <button type="submit">Test mode mixte (simple)</button>
             </form>
         </div>
 
@@ -134,13 +132,13 @@
                     <input type="text" name="action" value="update" required>
                 </div>
                 
-                <button type="submit">💾 Test mode avancé</button>
+                <button type="submit"> Test mode avancé</button>
             </form>
         </div>
 
 
         <p style="margin-top:30px;color:#666;font-size:14px">
-            ✅ Sprint 8 : Si vous cochez plusieurs villes, le framework stockera 
+             Sprint 8 : Si vous cochez plusieurs villes, le framework stockera 
             automatiquement un tableau <code>String[]</code> dans la Map.
         </p>
     </div>

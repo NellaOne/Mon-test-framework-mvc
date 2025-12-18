@@ -16,7 +16,7 @@
 </head>
 <body>
     <div class="box">
-        <h1>📝 ${titre}</h1>
+        <h1> ${titre}</h1>
         <form action="/test-framework-mvc/test/save" method="post">
             <div class="form-group">
                 <label>Nom :</label>
@@ -30,9 +30,9 @@
                 <label>Ville :</label>
                 <input type="text" name="ville" required>
             </div>
-            <button type="submit">💾 Enregistrer</button>
+            <button type="submit"> Enregistrer</button>
         </form>
-        <p style="margin-top:20px;color:#666">✅ Sprint 6 : Les paramètres seront injectés automatiquement</p>
+        <p style="margin-top:20px;color:#666"> Sprint 6 : Les paramètres seront injectés automatiquement</p>
     </div>
 </body>
 </html>
