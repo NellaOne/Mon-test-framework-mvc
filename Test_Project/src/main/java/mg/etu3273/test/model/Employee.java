@@ -69,4 +69,9 @@ public class Employee {
                 ", hobbies=" + hobbies +
                 '}';
     }
+
+    public void setModifiedBy(Integer currentUserId) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setModifiedBy'");
+    }
 }
